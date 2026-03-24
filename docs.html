@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex 中文资料库</title>
+  <link rel="stylesheet" href="./docs.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Codex Knowledge Base</p>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Codex 中文资料库</h1>
+          <p class="hero-text">
+            把当前目录里的使用指南、概念解释、提示词模板和总手册汇成一个可直接浏览的静态入口。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="./codex_handbook.md">先看总手册</a>
+            <a class="button secondary" href="./README.md">打开导航页</a>
+            <a class="button secondary" href="./index.html">回到贪吃蛇</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <p class="panel-label">推荐路径</p>
+          <ol class="route-list">
+            <li>第一次接触 Codex：先读总手册</li>
+            <li>概念不清：再看概念文档</li>
+            <li>准备实操：直接复制提示词模板</li>
+          </ol>
+        </aside>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="section">
+        <div class="section-head">
+          <p class="section-kicker">Start Here</p>
+          <h2>四份核心文档</h2>
+        </div>
+
+        <div class="card-grid">
+          <article class="doc-card accent-a">
+            <p class="card-type">总入口</p>
+            <h3>Codex 中文手册</h3>
+            <p>
+              一份综合文档，包含快速上手、核心概念、中文提示词模板、常见问题和官方索引。
+            </p>
+            <ul class="tag-list">
+              <li>新手优先</li>
+              <li>系统阅读</li>
+              <li>总索引</li>
+            </ul>
+            <a class="card-link" href="./codex_handbook.md">打开 `codex_handbook.md`</a>
+          </article>
+
+          <article class="doc-card accent-b">
+            <p class="card-type">操作指南</p>
+            <h3>Codex 使用指南</h3>
+            <p>
+              适合快速查安装、登录、命令、配置、权限模式，以及最常见的排查方法。
+            </p>
+            <ul class="tag-list">
+              <li>安装登录</li>
+              <li>命令配置</li>
+              <li>权限模式</li>
+            </ul>
+            <a class="card-link" href="./codex.md">打开 `codex.md`</a>
+          </article>
+
+          <article class="doc-card accent-c">
+            <p class="card-type">概念地图</p>
+            <h3>Codex 相关概念与理解</h3>
+            <p>
+              重点解释 agent、model、tool、MCP、skill、AGENTS.md、subagent、sandbox、approval。
+            </p>
+            <ul class="tag-list">
+              <li>概念区分</li>
+              <li>关系图</li>
+              <li>使用边界</li>
+            </ul>
+            <a class="card-link" href="./codex_concepts.md">打开 `codex_concepts.md`</a>
+          </article>
+
+          <article class="doc-card accent-d">
+            <p class="card-type">模板库</p>
+            <h3>Codex 提示词模板</h3>
+            <p>
+              直接复制可用，覆盖修 Bug、做功能、代码审查、需求澄清、解释代码等场景。
+            </p>
+            <ul class="tag-list">
+              <li>可直接复制</li>
+              <li>中文友好</li>
+              <li>实战导向</li>
+            </ul>
+            <a class="card-link" href="./prompt_template.md">打开 `prompt_template.md`</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div class="section-head">
+          <p class="section-kicker">Mental Model</p>
+          <h2>一眼看懂这些概念怎么分工</h2>
+        </div>
+
+        <div class="concept-grid">
+          <article class="concept-card">
+            <h3>Prompt</h3>
+            <p>说明这次要做什么。</p>
+          </article>
+          <article class="concept-card">
+            <h3>AGENTS.md</h3>
+            <p>规定长期怎么做。</p>
+          </article>
+          <article class="concept-card">
+            <h3>Skill</h3>
+            <p>封装重复流程和方法。</p>
+          </article>
+          <article class="concept-card">
+            <h3>MCP</h3>
+            <p>接入仓库外的实时工具和上下文。</p>
+          </article>
+          <article class="concept-card">
+            <h3>Subagent</h3>
+            <p>把可并行的任务拆给子代理。</p>
+          </article>
+          <article class="concept-card">
+            <h3>Sandbox / Approval</h3>
+            <p>控制读写边界和批准时机。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="section-kicker">Quick Copy</p>
+          <h2>最常用的起手式</h2>
+        </div>
+
+        <div class="snippet-grid">
+          <article class="snippet-card">
+            <h3>安装与登录</h3>
+            <pre><code>npm install -g @openai/codex
+codex
+codex login --device-auth</code></pre>
+          </article>
+
+          <article class="snippet-card">
+            <h3>日常配置</h3>
+            <pre><code>model = "gpt-5.4"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "cached"</code></pre>
+          </article>
+
+          <article class="snippet-card">
+            <h3>提示词骨架</h3>
+            <pre><code>目标：
+上下文：
+约束：
+完成标准：
+输出要求：</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="section-kicker">Files</p>
+          <h2>当前文档文件</h2>
+        </div>
+
+        <div class="file-list">
+          <a href="./README.md">README.md</a>
+          <a href="./codex_handbook.md">codex_handbook.md</a>
+          <a href="./codex.md">codex.md</a>
+          <a href="./codex_concepts.md">codex_concepts.md</a>
+          <a href="./prompt_template.md">prompt_template.md</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

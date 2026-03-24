@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <p class="eyebrow">Arcade Mini</p>
+      <h1>贪吃蛇</h1>
+      <p class="intro">
+        用方向键或 WASD 控制移动，吃到果实会变长。撞墙或撞到自己，游戏结束。
+      </p>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-label">分数</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">最高分</span>
+          <strong id="best-score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">状态</span>
+          <strong id="status">准备开始</strong>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="start-btn" type="button">开始游戏</button>
+        <button id="pause-btn" type="button">暂停</button>
+        <button id="restart-btn" type="button">重新开始</button>
+      </div>
+
+      <ul class="tips">
+        <li>按下开始后点击画布一次，可立即聚焦键盘控制。</li>
+        <li>暂停后再次点击暂停，可继续游戏。</li>
+      </ul>
+    </section>
+
+    <section class="board-shell">
+      <canvas id="game" width="480" height="480" aria-label="贪吃蛇游戏画布"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="overlay-title">准备开始</h2>
+        <p id="overlay-text">点击“开始游戏”，然后用键盘控制蛇移动。</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
