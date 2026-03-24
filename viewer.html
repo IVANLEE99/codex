@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex 文档阅读器</title>
+  <link rel="stylesheet" href="./viewer.css">
+</head>
+<body>
+  <div class="viewer-shell">
+    <header class="viewer-topbar">
+      <div>
+        <p class="viewer-kicker">Markdown Viewer</p>
+        <h1 id="page-title">正在加载文档</h1>
+      </div>
+
+      <nav class="viewer-actions" aria-label="文档导航">
+        <a href="./index.html">首页</a>
+        <a href="./docs.html">文档导航</a>
+        <a id="raw-link" href="./README.md">原始 Markdown</a>
+      </nav>
+    </header>
+
+    <main class="viewer-main">
+      <aside class="viewer-sidebar">
+        <section class="sidebar-card">
+          <p class="sidebar-kicker">文档</p>
+          <div class="sidebar-links">
+            <a href="./viewer.html?file=README.md&title=Codex%20%E6%96%87%E6%A1%A3%E5%AF%BC%E8%88%AA">README</a>
+            <a href="./viewer.html?file=codex_handbook.md&title=Codex%20%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C">总手册</a>
+            <a href="./viewer.html?file=codex.md&title=Codex%20%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97">使用指南</a>
+            <a href="./viewer.html?file=codex_concepts.md&title=Codex%20%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%90%86%E8%A7%A3">概念解释</a>
+            <a href="./viewer.html?file=prompt_template.md&title=Codex%20%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E6%9D%BF">提示词模板</a>
+          </div>
+        </section>
+
+        <section class="sidebar-card">
+          <p class="sidebar-kicker">提示</p>
+          <ul class="sidebar-tips">
+            <li>阅读器会直接抓取仓库里的 Markdown 文件并在浏览器端渲染。</li>
+            <li>GitHub Pages 启用后，`main` 分支根目录即可直接作为静态站点发布。</li>
+          </ul>
+        </section>
+      </aside>
+
+      <article class="viewer-article">
+        <div class="rendered-markdown" id="content">
+          <p class="loading">正在加载文档内容…</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script src="./viewer.js"></script>
+</body>
+</html>

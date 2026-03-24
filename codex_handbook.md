@@ -4,9 +4,9 @@
 
 配套原文档：
 
-- [codex.md](/Users/youngsdream/Documents/codex/codex.md)
-- [codex_concepts.md](/Users/youngsdream/Documents/codex/codex_concepts.md)
-- [prompt_template.md](/Users/youngsdream/Documents/codex/prompt_template.md)
+- [codex.md](./codex.md)
+- [codex_concepts.md](./codex_concepts.md)
+- [prompt_template.md](./prompt_template.md)
 
 ## 目录
 

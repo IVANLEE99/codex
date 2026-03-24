@@ -3,54 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>贪吃蛇</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>Codex 中文资料站</title>
+  <link rel="stylesheet" href="./docs.css">
 </head>
 <body>
-  <main class="app">
-    <section class="panel">
-      <p class="eyebrow">Arcade Mini</p>
-      <h1>贪吃蛇</h1>
-      <p class="intro">
-        用方向键或 WASD 控制移动，吃到果实会变长。撞墙或撞到自己，游戏结束。
-      </p>
-
-      <div class="stats">
-        <div class="stat-card">
-          <span class="stat-label">分数</span>
-          <strong id="score">0</strong>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Codex Pages Home</p>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Codex 中文资料站</h1>
+          <p class="hero-text">
+            这个仓库现在同时包含一套 Codex 中文文档站和一个独立的贪吃蛇页面，适合直接通过 GitHub Pages 发布。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="./docs.html">打开文档首页</a>
+            <a class="button secondary" href="./viewer.html?file=codex_handbook.md&title=Codex%20%E4%B8%AD%E6%96%87%E6%89%8B%E5%86%8C">阅读总手册</a>
+            <a class="button secondary" href="./snake.html">打开贪吃蛇</a>
+          </div>
         </div>
-        <div class="stat-card">
-          <span class="stat-label">最高分</span>
-          <strong id="best-score">0</strong>
+
+        <aside class="hero-panel">
+          <p class="panel-label">站点结构</p>
+          <ol class="route-list">
+            <li>首页：项目入口和站点分流</li>
+            <li>文档页：Codex 中文资料导航</li>
+            <li>阅读页：把 Markdown 文档渲染成可读页面</li>
+          </ol>
+        </aside>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="section">
+        <div class="section-head">
+          <p class="section-kicker">Main Routes</p>
+          <h2>三条主要入口</h2>
         </div>
-        <div class="stat-card">
-          <span class="stat-label">状态</span>
-          <strong id="status">准备开始</strong>
+
+        <div class="card-grid">
+          <article class="doc-card accent-a">
+            <p class="card-type">入口页</p>
+            <h3>文档导航</h3>
+            <p>集中查看使用指南、概念解释、提示词模板和总手册。</p>
+            <a class="card-link" href="./docs.html">进入 `docs.html`</a>
+          </article>
+
+          <article class="doc-card accent-b">
+            <p class="card-type">阅读页</p>
+            <h3>Markdown 阅读器</h3>
+            <p>把仓库里的 Markdown 文档直接渲染为浏览器页面，适合 GitHub Pages。</p>
+            <a class="card-link" href="./viewer.html?file=README.md&title=Codex%20%E6%96%87%E6%A1%A3%E5%AF%BC%E8%88%AA">打开 `viewer.html`</a>
+          </article>
+
+          <article class="doc-card accent-c">
+            <p class="card-type">附带页面</p>
+            <h3>贪吃蛇</h3>
+            <p>保留原本的小游戏页面，单独迁移到 `snake.html`，不影响文档站发布。</p>
+            <a class="card-link" href="./snake.html">打开 `snake.html`</a>
+          </article>
         </div>
-      </div>
-
-      <div class="actions">
-        <button id="start-btn" type="button">开始游戏</button>
-        <button id="pause-btn" type="button">暂停</button>
-        <button id="restart-btn" type="button">重新开始</button>
-      </div>
-
-      <ul class="tips">
-        <li>按下开始后点击画布一次，可立即聚焦键盘控制。</li>
-        <li>暂停后再次点击暂停，可继续游戏。</li>
-      </ul>
-    </section>
-
-    <section class="board-shell">
-      <canvas id="game" width="480" height="480" aria-label="贪吃蛇游戏画布"></canvas>
-      <div class="overlay" id="overlay">
-        <h2 id="overlay-title">准备开始</h2>
-        <p id="overlay-text">点击“开始游戏”，然后用键盘控制蛇移动。</p>
-      </div>
-    </section>
-  </main>
-
-  <script src="./script.js"></script>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
