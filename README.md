@@ -78,6 +78,13 @@
 - Markdown 阅读器：`viewer.html`
 - 贪吃蛇页面：`snake.html`
 
+## 可用地址
+
+- 首页：https://ivanlee99.github.io/codex/
+- 文档导航：https://ivanlee99.github.io/codex/docs.html
+- Markdown 阅读器：https://ivanlee99.github.io/codex/viewer.html?file=codex_handbook.md&title=Codex
+- 贪吃蛇：https://ivanlee99.github.io/codex/snake.html
+
 ## 当前目录文件
 
 - [index.html](./index.html)
