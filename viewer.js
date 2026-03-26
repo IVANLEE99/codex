@@ -4,6 +4,7 @@ const allowedFiles = new Set([
   "codex.md",
   "codex_concepts.md",
   "prompt_template.md",
+  "14_models.md",
 ]);
 
 const pageTitleEl = document.getElementById("page-title");

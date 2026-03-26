@@ -53,6 +53,14 @@
 - 先澄清需求模板
 - 解释代码模板
 
+### [14_models.md](./14_models.md)
+
+模型对比文档。适合查看状态页里的 14 条模型节点记录，包括：
+
+- 实时状态总表
+- 逐条优缺点
+- 简短选型结论
+
 ## 你可以怎么用
 
 ### 想马上开始用 Codex
@@ -71,6 +79,10 @@
 
 看 [codex_concepts.md](./codex_concepts.md)。
 
+### 想看 14 个模型节点的优缺点对比
+
+看 [14_models.md](./14_models.md)。
+
 ## GitHub Pages 路由
 
 - 首页：`index.html`
@@ -83,6 +95,7 @@
 - 首页：https://ivanlee99.github.io/codex/
 - 文档导航：https://ivanlee99.github.io/codex/docs.html
 - Markdown 阅读器：https://ivanlee99.github.io/codex/viewer.html?file=codex_handbook.md&title=Codex
+- 14 个模型文档：https://ivanlee99.github.io/codex/viewer.html?file=14_models.md&title=14%20Models
 - 贪吃蛇：https://ivanlee99.github.io/codex/snake.html
 
 ## 当前目录文件
@@ -96,3 +109,4 @@
 - [codex.md](./codex.md)
 - [codex_concepts.md](./codex_concepts.md)
 - [prompt_template.md](./prompt_template.md)
+- [14_models.md](./14_models.md)
