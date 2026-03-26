@@ -21,7 +21,8 @@ const contentEl = document.getElementById("content");
 const rawLinkEl = document.getElementById("raw-link");
 
 const params = new URLSearchParams(window.location.search);
-const file = params.get("file") || "README.md";
+const requestedFile = params.get("file") || "README.md";
+const file = normalizeFile(requestedFile);
 const title = params.get("title") || defaultTitles[file] || file;
 
 if (!allowedFiles.has(file)) {
@@ -47,6 +48,40 @@ async function loadMarkdown(targetFile) {
   } catch (error) {
     contentEl.innerHTML = `<p>文档加载失败：${escapeHtml(String(error.message || error))}</p>`;
   }
+}
+
+function normalizeFile(value) {
+  if (!value) {
+    return "README.md";
+  }
+
+  let normalized = value.trim();
+
+  try {
+    normalized = decodeURIComponent(normalized);
+  } catch (_error) {
+    // Keep the raw value when it is not valid URI-encoded text.
+  }
+
+  try {
+    if (/^https?:\/\//i.test(normalized)) {
+      const url = new URL(normalized);
+      normalized = url.pathname;
+    }
+  } catch (_error) {
+    // Keep the current value when URL parsing fails.
+  }
+
+  normalized = normalized.replace(/^\/+/, "");
+  normalized = normalized.replace(/^codex\//, "");
+  normalized = normalized.replace(/^\.\//, "");
+
+  if (normalized.includes("/")) {
+    const parts = normalized.split("/");
+    normalized = parts[parts.length - 1];
+  }
+
+  return normalized || "README.md";
 }
 
 function renderMarkdown(markdown) {
