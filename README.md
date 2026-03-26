@@ -95,7 +95,7 @@
 - 首页：https://ivanlee99.github.io/codex/
 - 文档导航：https://ivanlee99.github.io/codex/docs.html
 - Markdown 阅读器：https://ivanlee99.github.io/codex/viewer.html?file=codex_handbook.md&title=Codex
-- 14 个模型文档：https://ivanlee99.github.io/codex/viewer.html?file=14_models.md&title=14%20Models
+- 14 个模型文档：https://ivanlee99.github.io/codex/viewer.html?file=14_models.md
 - 贪吃蛇：https://ivanlee99.github.io/codex/snake.html
 
 ## 当前目录文件

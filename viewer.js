@@ -7,13 +7,22 @@ const allowedFiles = new Set([
   "14_models.md",
 ]);
 
+const defaultTitles = {
+  "README.md": "Codex 文档导航",
+  "codex_handbook.md": "Codex 中文手册",
+  "codex.md": "Codex 使用指南",
+  "codex_concepts.md": "Codex 相关概念与理解",
+  "prompt_template.md": "Codex 提示词模板",
+  "14_models.md": "14 个模型节点优缺点",
+};
+
 const pageTitleEl = document.getElementById("page-title");
 const contentEl = document.getElementById("content");
 const rawLinkEl = document.getElementById("raw-link");
 
 const params = new URLSearchParams(window.location.search);
 const file = params.get("file") || "README.md";
-const title = params.get("title") || file;
+const title = params.get("title") || defaultTitles[file] || file;
 
 if (!allowedFiles.has(file)) {
   pageTitleEl.textContent = "无法打开文档";
